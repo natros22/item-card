@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Space+Mono&display=swap');
+        body {
+            font-family: monospace; 
+            font-weight: bold;
+            font-size: 12px;
+            display: flex;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .wrapper{
+            width: 50%;
+            display: block;
+            background-color: #7dcfeb;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 20px;
+        }  
+        h1{
+            font-weight: bold;
+        }
+        button{
+            background-color: #5e9baf;
+            border-radius: 5px;
+            border-style: none;
+            width: 200px;
+            height: 20px;
+            font-family: monospace;
+        }
+        button:hover{
+            background-color: #83daf0;
+        }
+        ul{
+            display: none;
+        }
+        #hide{
+            display: none;
+        }
+        </style>
+</head>
+<body>
+    <div class = "wrapper">
+    <h1>Beats Studio 3 Wireless</h1>
+    <p>
+High-performance wireless noise cancelling headphones. Compatible with iOS and Android devices. Up to 22 hours of battery life enables full-featured all-day wireless playback.</p>
+    <button id = "show">Show details</button>
+    <ul>
+        <li>Brand: Beats</li>
+        <li>Connections: Bluetooth</li>
+        <li>Model Name: Beats Studio3</li>
+        <li>Color: Matte Black</li>
+        <li>Headphones Jack: 3.5 mm</li>
+    </ul>
+    <button id="hide">Hide details</button>
+    </div>
+    <script>
+        const showBtn = document.getElementById('show');
+        const hideBtn = document.getElementById('hide');
+        const details = document.querySelector('ul');
+        showBtn.addEventListener('click', showDetails);
+        hideBtn.addEventListener('click', hideDetails);
+
+        function showDetails(){;
+            showBtn.style.display = 'none';
+            hideBtn.style.display = 'block';
+            details.style.display = 'block';
+        }
+
+        function hideDetails(){
+            hideBtn.style.display = 'none';
+            details.style.display = 'none';
+            showBtn.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
